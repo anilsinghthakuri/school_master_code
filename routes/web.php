@@ -22,6 +22,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-Route::view('/temp', 'layouts.backend.temp');
+Route::view('/master', 'layouts.backend.master');
+
+//for gallery
+Route::view('/gallery-album', 'gallery.index')->name('gallery.album');
+Route::view('/gallery-image', 'gallery.galleryimage')->name('gallery.image');
 
 require __DIR__.'/auth.php';
