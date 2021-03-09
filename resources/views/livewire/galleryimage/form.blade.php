@@ -10,7 +10,7 @@
         </div>
     </div>
     <!-- /.card-header -->
-    <form>
+    <form wire:submit.prevent="submit" enctype="multipart/form-data">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
@@ -32,7 +32,12 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Choose Image</label>
-                        <input type="file" wire:model = 'gallery_image_name' class="form-control" multiple>
+                        <input type="file" wire:model = 'gallery_image_name' class="form-control" id="{{ rand() }}">
+                        @error('gallery_image_name')
+                            <span class="text-danger error">
+                                {{$message}}
+                            </span>
+                        @enderror
                     </div>
                     <!-- /.form-group -->
 
