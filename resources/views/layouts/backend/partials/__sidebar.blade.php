@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-light-primary elevation-3">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         <img src="{{asset('backend/dist/img/AdminLTELogo.png')}}" alt="Logo" class="brand-image img-circle elevation-3"
@@ -37,6 +37,8 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
        with font-awesome or any other icon font library -->
+
+       {{-- link for gallery --}}
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
                         <i class="nav-icon "></i>
@@ -56,6 +58,31 @@
                             <a href="/gallery-image" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Gallery Image</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                    {{-- link for staff --}}
+                <li class="nav-item ">
+                    <a href="#" class="nav-link ">
+                        <i class="nav-icon "></i>
+                        <p>
+                            Staff
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/staff-category" class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Staff Category</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/staff" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Staff</p>
                             </a>
                         </li>
                     </ul>

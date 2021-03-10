@@ -28,4 +28,8 @@ Route::view('/master', 'layouts.backend.master');
 Route::view('/gallery-album', 'gallery.index')->name('gallery.album');
 Route::view('/gallery-image', 'gallery.galleryimage')->name('gallery.image');
 
+//for staff
+Route::view('/staff-category', 'staff.staff_category');
+Route::view('/staff', 'staff.staff');
+
 require __DIR__.'/auth.php';

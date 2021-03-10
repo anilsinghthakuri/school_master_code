@@ -13,6 +13,7 @@ class Gallerycategory extends Component
     public $updateMode = false;
     public $status = [];
     public $gallery_album_list;
+    public $message;
 
 
     //for store date
@@ -27,8 +28,12 @@ class Gallerycategory extends Component
         //save the data on table
         GalleryAlbum::create($validatedata);
 
+        //for message
+            $this->message = 'Gallery Created Successfully';
+
         //for clear the form
             $this->clear_form();
+
     }
 
     //edit the gallery category
@@ -84,6 +89,8 @@ class Gallerycategory extends Component
     }
     public function render()
     {
+
+
         $this->gallery_album_list = $this->fetch_gallery_category_list();
         return view('livewire.gallery.gallerycategory');
     }

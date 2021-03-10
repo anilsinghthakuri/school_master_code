@@ -11,4 +11,12 @@
 
     <!-- gallery image light box -->
     <script src="{{asset('backend/plugins/ekko-lightbox/ekko-lightbox.min.js')}}"></script>
+
+    <!-- Toastr -->
+    <script src="{{asset('backend/plugins/toastr/toastr.min.js')}}"></script>
+
+    @jquery
+    @toastr_js
+    @toastr_render
+
     @stack('script')

@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="{{asset('backend/plugins/select2/css/select2.min.css')}}">
   <link rel="stylesheet" href="{{asset('plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
 
+  {{-- over lay scroll bar --}}
+  <link rel="stylesheet" href="{{asset('backend/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+
   <!-- gallery image Ekko Lightbox -->
   <link rel="stylesheet" href="{{asset('backend/plugins/ekko-lightbox/ekko-lightbox.css')}}">
+
+ <!-- Toastr -->
+  <link rel="stylesheet" href="{{asset('backend/plugins/toastr/toastr.min.css')}}">
+  @toastr_css
   @stack('style')
