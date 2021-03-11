@@ -105,9 +105,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/staff" class="nav-link">
+                            <a href="/notice" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Add Staff</p>
+                                <p>Add Notice</p>
                             </a>
                         </li>
                     </ul>
