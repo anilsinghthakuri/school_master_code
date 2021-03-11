@@ -124,11 +124,17 @@
 
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+            <i class="fas fa-user-circle"></i>
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <div class="dropdown-menu dropdown-menu dropdown-menu-right ">
 
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <button type="submit" class="underline text-sm btn btn-primary btn-block">
+                    {{ __('Log out') }}
+                </button>
+            </form>
 
 
         </div>
