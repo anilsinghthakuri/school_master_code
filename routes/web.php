@@ -32,6 +32,9 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/staff-category', 'staff.staff_category');
     Route::view('/staff', 'staff.staff');
 
+    //for notice
+    Route::view('/notice-category', 'notice.noticecategory');
+
 });
 
 

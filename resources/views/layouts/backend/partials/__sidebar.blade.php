@@ -41,7 +41,7 @@
        {{-- link for gallery --}}
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon "></i>
+                        <i class="nav-icon fas fa-image "></i>
                         <p>
                             Gallery
                             <i class="right fas fa-angle-left"></i>
@@ -66,7 +66,7 @@
                     {{-- link for staff --}}
                 <li class="nav-item ">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon "></i>
+                        <i class="nav-icon fas fa-user-tie "></i>
                         <p>
                             Staff
                             <i class="right fas fa-angle-left"></i>
@@ -77,6 +77,31 @@
                             <a href="/staff-category" class="nav-link ">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Staff Category</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/staff" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Add Staff</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{-- notice link --}}
+                <li class="nav-item ">
+                    <a href="#" class="nav-link ">
+                        <i class="nav-icon far fa-newspaper "></i>
+                        <p>
+                            Notice
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/notice-category" class="nav-link ">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Notice Category</p>
                             </a>
                         </li>
                         <li class="nav-item">
