@@ -172,7 +172,8 @@ class Notice extends Component
                             $data->notice_description = $this->notice_description;
                             $data->notice_type_id = $this->notice_type_id;
                             $data->save();
-                        } else {
+                        }
+                        else {
 
                             $validated = $this->validate([
                                 'notice_heading'=>'required|max:50|min:1',
@@ -207,7 +208,7 @@ class Notice extends Component
                          }
                          else {
 
-                            if ($this->notic_file == null) {
+                            if ($this->notice_file == null) {
 
                             $validated = $this->validate([
                                 'notice_heading'=>'required|max:50|min:1',

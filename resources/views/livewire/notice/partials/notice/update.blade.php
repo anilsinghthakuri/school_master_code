@@ -33,7 +33,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Notice File Type</label>
-                    <select class="form-control select2bs4" wire:model='notice_type_id' style="width: 100%;">
+                    <select class="form-control select2bs4" wire:model='notice_type_id' style="width: 100%;" disabled>
                         <option value="0" selected="selected">Choose Notice file type</option>
                         @foreach ($notice_type_list as $item)
                         <option value="{{$item->notice_type_id}}">{{$item->notice_type_name}}</option>
