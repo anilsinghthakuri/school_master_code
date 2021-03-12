@@ -36,6 +36,9 @@ Route::middleware(['auth'])->group(function () {
     Route::view('/notice-category', 'notice.noticecategory');
     Route::view('/notice', 'notice.notice');
 
+    //for setup
+    Route::view('/setup', 'setup.setup');
+
 });
 
 
