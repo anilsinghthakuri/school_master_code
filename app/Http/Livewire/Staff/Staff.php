@@ -68,6 +68,13 @@ class Staff extends Component
         }
         $this->clear_form();
 
+        //for alert
+        $this->alert('success', 'Staff Created Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
+
     }
     //view profil image
     public function view($id)
@@ -132,6 +139,13 @@ class Staff extends Component
             }
 
             $this->updateMode = false;
+
+            //for alert
+            $this->alert('success', 'Staff Updated Sucessfully', [
+                'position' =>  'top-end',
+                'timer' =>  2000,
+                'toast' =>  true,
+            ]);
             $this->clear_form();
         }
 
@@ -140,6 +154,13 @@ class Staff extends Component
     public function delete($id)
     {
         ModelsStaff::findorfail($id)->delete();
+
+        //for alert
+        $this->alert('success', 'Staff Deleted Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
     }
 
     //fetch all staff data

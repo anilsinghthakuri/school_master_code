@@ -31,6 +31,12 @@ class Gallerycategory extends Component
         //for message
             $this->message = 'Gallery Created Successfully';
 
+        //for alert
+        $this->alert('success', 'Gallery Album Created Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
         //for clear the form
             $this->clear_form();
 
@@ -64,6 +70,13 @@ class Gallerycategory extends Component
         //update mode off
         $this->updateMode = false;
 
+        //for alert
+        $this->alert('success', 'Gallery Album Updated Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
+
         //for clear the form
             $this->clear_form();
     }
@@ -86,6 +99,14 @@ class Gallerycategory extends Component
     public function delete($id)
     {
         GalleryAlbum::findorfail($id)->delete();
+
+        //for alert
+        $this->alert('success', 'Gallery Album Deleted Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
+
     }
     public function render()
     {

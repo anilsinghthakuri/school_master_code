@@ -118,6 +118,13 @@ class Notice extends Component
                 }
             }
             $this->clear_form();
+
+            //for alert
+            $this->alert('success', 'Notice Created Sucessfully', [
+                'position' =>  'top-end',
+                'timer' =>  2000,
+                'toast' =>  true,
+            ]);
         }
 
     }
@@ -305,6 +312,13 @@ class Notice extends Component
              }
              $this->updateMode = false;
              $this->clear_form();
+
+             //for alert
+            $this->alert('success', 'Notice Updated Sucessfully', [
+                'position' =>  'top-end',
+                'timer' =>  2000,
+                'toast' =>  true,
+            ]);
          }
 
      }
@@ -313,6 +327,13 @@ class Notice extends Component
     public function delete($id)
     {
         ModelsNotice::findorfail($id)->delete();
+
+        //for alert
+        $this->alert('success', 'Notice Deleted Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
     }
 
     //for fetch all notice

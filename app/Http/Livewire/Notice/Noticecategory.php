@@ -24,6 +24,13 @@ class Noticecategory extends Component
 
         $this->clear_form();
 
+        //for alert
+        $this->alert('success', 'Notice Category Created Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
+
     }
 
     //edit the notice category
@@ -56,12 +63,26 @@ class Noticecategory extends Component
 
         //for clear the form
             $this->clear_form();
+
+        //for alert
+        $this->alert('success', 'Notice Category Updated Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
     }
 
     //for delete
     public function delete($id)
     {
         ModelsNoticeCategory::findorfail($id)->delete();
+
+        //for alert
+        $this->alert('success', 'Notice Category Deleted Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
     }
 
     //fetch all notice category data

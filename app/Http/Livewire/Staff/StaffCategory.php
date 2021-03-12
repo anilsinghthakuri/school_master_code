@@ -23,6 +23,13 @@ class StaffCategory extends Component
         //save the data on table
         ModelsStaffCategory::create($validatedata);
 
+        //for alert
+        $this->alert('success', 'Staff Category  Created Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
+
         //for clear the form
             $this->clear_form();
     }
@@ -62,6 +69,13 @@ class StaffCategory extends Component
         //update mode off
         $this->updateMode = false;
 
+        //for alert
+        $this->alert('success', 'Staff Category  Updated Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
+
         //for clear the form
             $this->clear_form();
     }
@@ -77,6 +91,13 @@ class StaffCategory extends Component
     public function delete($id)
     {
         ModelsStaffCategory::findorfail($id)->delete();
+
+        //for alert
+        $this->alert('success', 'Staff Category  Deleted Sucessfully', [
+            'position' =>  'top-end',
+            'timer' =>  2000,
+            'toast' =>  true,
+        ]);
     }
     public function render()
     {
