@@ -17,11 +17,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
 
-Route::view('/temp', 'layouts.backend.temp');
+Route::middleware(['auth'])->group(function () {
+
+    //for dashboard
+    Route::view('/dashboard', 'dashboard');
+
+    //for gallery
+    Route::view('/gallery-album', 'gallery.index')->name('gallery.album');
+    Route::view('/gallery-image', 'gallery.galleryimage')->name('gallery.image');
+
+    //for staff
+    Route::view('/staff-category', 'staff.staff_category');
+    Route::view('/staff', 'staff.staff');
+
+    //for notice
+    Route::view('/notice-category', 'notice.noticecategory');
+    Route::view('/notice', 'notice.notice');
+
+    //for setup
+    Route::view('/setup', 'setup.setup');
+
+});
+
 
 require __DIR__.'/auth.php';

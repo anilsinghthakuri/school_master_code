@@ -1,7 +1,8 @@
 @extends('layouts.backend.master')
 
-@section('title','dashboard')
+@section('title','Staff')
+
 
 @section('content')
-    <h1>dashboard</h1>
+    @livewire('staff.staff')
 @endsection
